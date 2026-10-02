@@ -47,10 +47,21 @@ Studio connect.
 
 Each half separately:
 
-1. Hold **mod** + **macro1** → the *left* half mounts as a USB drive.
-2. Copy the `-left-clique.uf2` onto it. It reboots itself.
-3. Hold **mod** + **macro3** → the *right* half mounts.
-4. Copy the `-right-clique.uf2` onto it.
+Hold **Mod** — the innermost key of the *right* half's **top** row (matrix
+position 7, `&mo 3`) — and press the innermost key one row **down**:
+
+| Hold | Then press | Result |
+|------|-----------|--------|
+| Mod (pos 7) | innermost key, **left** half, 2nd row (pos 20, legend `macro1`) | left half mounts as a USB drive |
+| Mod (pos 7) | innermost key, **right** half, 2nd row (pos 21, legend `macro3`) | right half mounts |
+
+Copy the matching `.uf2` onto the drive; the half reboots itself. Do one, then
+the other.
+
+> The keycap legends say `macro1`/`macro3`, but `config/info.json` calls the
+> same two keys `mod3`/`mod4` — it numbers the six inner keys interleaved
+> across halves. When they disagree, trust the matrix positions; the map is
+> `assets/key-positions.png`.
 
 There are also physical reset buttons on both halves (User Manual §2.7) if the
 keymap is too broken to reach the Mod layer.
